@@ -203,6 +203,22 @@ section h3{
 
 }
 
+.preview-box img{
+
+    max-width:100%;
+
+    max-height:100%;
+
+    width:auto;
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+
+}
+
 /* ===========================
    ACTION BUTTON
 =========================== */
