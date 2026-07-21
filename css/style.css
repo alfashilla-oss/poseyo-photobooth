@@ -294,3 +294,19 @@ transform:translateX(5px);
 background:#ffe5f1;
 
 }
+
+@media(max-width:900px){
+
+.dashboard{
+
+flex-direction:column;
+
+}
+
+.right-panel{
+
+width:100%;
+
+}
+
+}
