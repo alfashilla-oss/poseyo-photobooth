@@ -238,3 +238,59 @@ section h3{
     background:#ff2d88;
 
 }
+
+/* ======================
+DASHBOARD
+====================== */
+
+.dashboard{
+
+display:flex;
+
+gap:25px;
+
+align-items:flex-start;
+
+}
+
+.left-panel{
+
+flex:3;
+
+}
+
+.right-panel{
+
+flex:1;
+
+}
+
+/* ======================
+STATUS SLOT
+====================== */
+
+.slot{
+
+padding:15px;
+
+background:#fff7fb;
+
+border-radius:15px;
+
+margin-top:12px;
+
+font-weight:500;
+
+border:1px solid #ffd6e8;
+
+transition:.3s;
+
+}
+
+.slot:hover{
+
+transform:translateX(5px);
+
+background:#ffe5f1;
+
+}
