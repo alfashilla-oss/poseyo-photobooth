@@ -1,27 +1,28 @@
-const templateCards = document.querySelectorAll(".template-card");
+const video = document.getElementById("video");
 
-const previewImage = document.getElementById("previewImage");
+const startCamera =
+document.getElementById("startCamera");
 
-let selectedFrame = "assets/frames/frame1.png";
+startCamera.addEventListener("click", async ()=>{
 
-templateCards.forEach(card => {
+try{
 
-card.addEventListener("click", () => {
+const stream = await navigator.mediaDevices.getUserMedia({
 
-templateCards.forEach(item => {
+video:true,
 
-item.classList.remove("active");
-
-});
-
-card.classList.add("active");
-
-previewImage.src = card.dataset.preview;
-
-selectedFrame = card.dataset.frame;
-
-console.log("Frame dipilih:", selectedFrame);
+audio:false
 
 });
+
+video.srcObject = stream;
+
+}
+
+catch(err){
+
+alert("Kamera tidak dapat diakses");
+
+}
 
 });
