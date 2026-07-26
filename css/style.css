@@ -63,11 +63,9 @@ nav{
 }
 
 .menu-btn:hover{
-
-transform:translateY(-3px);
-
-box-shadow:0 8px 20px rgba(0,0,0,.12);
-
+    transform:translateY(-3px);
+    background:#ffd2e8;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 
 /* ===========================
@@ -123,13 +121,13 @@ section h3{
 }
 
 .template-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px) scale(1.02);
     box-shadow:0 12px 25px rgba(0,0,0,.12);
 }
 
 .template-card.active{
     border-color:#ff4f9a;
-   box-shadow:0 0 18px rgba(255,79,154,.35);
+    box-shadow:0 0 18px rgba(255,79,154,.35);
 }
 
 .template-card img{
@@ -161,7 +159,7 @@ section h3{
     display:flex;
     justify-content:center;
     align-items:center;
-   transition:.35s;
+    transition:.35s;
 }
 
 #previewImage{
@@ -169,6 +167,32 @@ section h3{
     max-height:650px;
     object-fit:contain;
     display:block;
+    transition:.35s;
+}
+
+/* ===========================
+   CAMERA
+=========================== */
+
+.camera-box{
+    width:100%;
+    aspect-ratio:4/3;
+    background:#222;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+#video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+    border-radius:18px;
 }
 
 /* ===========================
@@ -212,62 +236,22 @@ section h3{
 
 @media(max-width:1000px){
 
-header{
-    flex-direction:column;
-    gap:20px;
-}
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
 
-nav{
-    flex-wrap:wrap;
-    justify-content:center;
-}
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-.dashboard{
-    grid-template-columns:1fr;
-}
+    .dashboard{
+        grid-template-columns:1fr;
+    }
 
-.preview-box{
-    max-width:350px;
-}
-
-.template-card:hover{
-
-    transform:translateY(-8px) scale(1.02);
-
-}
-
-.camera-box{
-
-width:100%;
-
-aspect-ratio:4/3;
-
-background:#222;
-
-border-radius:20px;
-
-overflow:hidden;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-margin-top:15px;
-   box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-}
-
-#video{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-display:none;
-   border-radius:18px;
+    .preview-box{
+        max-width:350px;
+    }
 
 }
