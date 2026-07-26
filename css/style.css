@@ -63,8 +63,11 @@ nav{
 }
 
 .menu-btn:hover{
-    transform:translateY(-3px);
-    background:#ffd2e8;
+
+transform:translateY(-3px);
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
 }
 
 /* ===========================
