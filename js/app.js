@@ -205,7 +205,11 @@ async function createPhotoStrip(){
 
     const ctx = stripCanvas.getContext("2d");
 
-    const frame = await loadImage(selectedFrame);
+    const config=frameConfigs[selectedFrame];
+
+const background=await loadImage(config.background);
+
+const overlay=await loadImage(config.overlay);
 
     stripCanvas.width = frame.width;
     stripCanvas.height = frame.height;
