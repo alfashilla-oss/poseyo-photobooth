@@ -117,10 +117,10 @@ async function takePhoto(){
 
     console.log(photos);
 
-    photoResult.src = photos[0];
+    await createPhotoStrip();
 
-    photoResult.style.display = "block";
-
+photoResult.style.display = "block";
+    
 }
 
 async function createPhotoStrip(){
