@@ -205,49 +205,32 @@ async function createPhotoStrip(){
 
     const ctx = stripCanvas.getContext("2d");
 
-    const config=frameConfigs[selectedFrame];
-
-const background=await loadImage(config.background);
-
-const overlay=await loadImage(config.overlay);
-
-    stripCanvas.width = frame.width;
-    stripCanvas.height = frame.height;
-
-    ctx.clearRect(0,0,stripCanvas.width,stripCanvas.height);
-
-    ctx.drawImage(frame,0,0);
-
     const config = frameConfigs[selectedFrame];
 
-const photoWidth = config.width;
-const photoHeight = config.height;
+const background = await loadImage(config.background);
 
-const startX = config.x;
-const startY = config.y;
+const overlay = await loadImage(config.overlay);
 
-const gap = config.gap;
+// Background
+ctx.drawImage(background,0,0);
 
-    for(let i=0;i<photos.length;i++){
+// Semua foto
+for(let i=0;i<photos.length;i++){
 
-        const img = await loadImage(photos[i]);
+    const img = await loadImage(photos[i]);
 
-        ctx.drawImage(
-
-            img,
-
-            startX,
-
-            startY+i*(photoHeight+gap),
-
-            photoWidth,
-
-            photoHeight
-
-        );
-
-    }
-
-    photoResult.src = stripCanvas.toDataURL("image/png");
+    ctx.drawImage(
+        img,
+        startX,
+        startY+i*(photoHeight+gap),
+        photoWidth,
+        photoHeight
+    );
 
 }
+
+// Overlay
+ctx.drawImage(overlay,0,0);
+
+// Tampilkan hasil
+photoResult.src = stripCanvas.toDataURL("image/png");
