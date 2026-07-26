@@ -226,3 +226,21 @@ nav{
 }
 
 }
+
+#previewImage{
+
+    transition:.35s;
+
+}
+
+.template-card{
+
+    transition:.35s;
+
+}
+
+.template-card:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+}
