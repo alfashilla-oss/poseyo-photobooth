@@ -26,6 +26,7 @@ cards.forEach(card => {
 
 const video = document.getElementById("video");
 const startCamera = document.getElementById("startCamera");
+const downloadPhoto = document.getElementById("downloadPhoto");
 
 let cameraStream = null;
 
