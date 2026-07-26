@@ -22,3 +22,39 @@ cards.forEach(card => {
     });
 
 });
+
+const video = document.getElementById("video");
+
+const startCamera =
+document.getElementById("startCamera");
+
+startCamera.addEventListener("click", async ()=>{
+
+try{
+
+const stream =
+await navigator.mediaDevices.getUserMedia({
+
+video:{
+facingMode:"user"
+},
+
+audio:false
+
+});
+
+video.srcObject = stream;
+
+video.style.display="block";
+
+}
+
+catch(err){
+
+alert("Kamera tidak dapat diakses.");
+
+console.error(err);
+
+}
+
+});
