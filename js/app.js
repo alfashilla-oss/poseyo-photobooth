@@ -47,9 +47,11 @@ startCamera.addEventListener("click", async () => {
 
         video.srcObject = cameraStream;
 
-        await video.play();
+await video.play();
 
-        video.style.display = "block";
+video.style.display = "block";
+
+await takePhoto();
 
         startCamera.disabled = true;
         startCamera.textContent = "✅ Kamera Aktif";
