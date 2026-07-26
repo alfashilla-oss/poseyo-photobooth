@@ -65,3 +65,44 @@ startCamera.addEventListener("click", async () => {
     }
 
 });
+
+const countdown = document.getElementById("countdown");
+const canvas = document.getElementById("canvas");
+const photoResult = document.getElementById("photoResult");
+
+function delay(ms){
+
+    return new Promise(resolve=>setTimeout(resolve,ms));
+
+}
+
+async function takePhoto(){
+
+    countdown.style.display = "block";
+
+    for(let i = 3; i >= 1; i--){
+
+        countdown.textContent = i;
+
+        await delay(1000);
+
+    }
+
+    countdown.textContent = "📸";
+
+    await delay(400);
+
+    countdown.style.display = "none";
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    const ctx = canvas.getContext("2d");
+
+    ctx.drawImage(video, 0, 0);
+
+    photoResult.src = canvas.toDataURL("image/png");
+
+    photoResult.style.display = "block";
+
+}
