@@ -1,7 +1,7 @@
 const cards = document.querySelectorAll(".template-card");
 const previewImage = document.getElementById("previewImage");
 
-let selectedFrame = "assets/frames/frame1.png";
+let selectedFrame="frame1";
 
 cards.forEach(card => {
 
