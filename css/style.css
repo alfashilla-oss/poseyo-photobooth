@@ -119,7 +119,7 @@ section h3{
     border-radius:18px;
     overflow:hidden;
     cursor:pointer;
-    transition:.3s;
+    transition:.35s;
 }
 
 .template-card:hover{
@@ -161,7 +161,7 @@ section h3{
     display:flex;
     justify-content:center;
     align-items:center;
-   transition:.3s;
+   transition:.35s;
 }
 
 #previewImage{
