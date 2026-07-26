@@ -122,3 +122,60 @@ async function takePhoto(){
     photoResult.style.display = "block";
 
 }
+
+async function createPhotoStrip(){
+
+    const ctx = stripCanvas.getContext("2d");
+
+    const width = 900;
+    const height = 1600;
+
+    stripCanvas.width = width;
+    stripCanvas.height = height;
+
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0,0,width,height);
+
+    const photoWidth = 700;
+    const photoHeight = 320;
+
+    const startX = 100;
+    const startY = 80;
+
+    const gap = 35;
+
+    for(let i=0;i<photos.length;i++){
+
+        const img = new Image();
+
+        await new Promise(resolve=>{
+
+            img.onload = ()=>{
+
+                ctx.drawImage(
+
+                    img,
+
+                    startX,
+
+                    startY + i*(photoHeight+gap),
+
+                    photoWidth,
+
+                    photoHeight
+
+                );
+
+                resolve();
+
+            };
+
+            img.src = photos[i];
+
+        });
+
+    }
+
+    photoResult.src = stripCanvas.toDataURL("image/png");
+
+}
