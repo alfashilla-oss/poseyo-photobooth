@@ -28,6 +28,7 @@ const video = document.getElementById("video");
 const startCamera = document.getElementById("startCamera");
 
 let cameraStream = null;
+let photos = [];
 
 startCamera.addEventListener("click", async () => {
 
