@@ -129,6 +129,7 @@ section h3{
 
 .template-card.active{
     border-color:#ff4f9a;
+   box-shadow:0 0 18px rgba(255,79,154,.35);
 }
 
 .template-card img{
@@ -160,6 +161,7 @@ section h3{
     display:flex;
     justify-content:center;
     align-items:center;
+   transition:.3s;
 }
 
 #previewImage{
@@ -267,6 +269,7 @@ justify-content:center;
 align-items:center;
 
 margin-top:15px;
+   box-shadow:0 8px 20px rgba(0,0,0,.15);
 
 }
 
