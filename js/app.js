@@ -29,6 +29,41 @@ const startCamera = document.getElementById("startCamera");
 
 let cameraStream = null;
 let photos = [];
+const frameConfigs = {
+
+    "assets/frames/frame1.png":{
+        x:180,
+        y:150,
+        width:540,
+        height:300,
+        gap:40
+    },
+
+    "assets/frames/frame2.png":{
+        x:180,
+        y:150,
+        width:540,
+        height:300,
+        gap:40
+    },
+
+    "assets/frames/frame3.png":{
+        x:180,
+        y:150,
+        width:540,
+        height:300,
+        gap:40
+    },
+
+    "assets/frames/frame4.png":{
+        x:180,
+        y:150,
+        width:540,
+        height:300,
+        gap:40
+    }
+
+};
 const stripCanvas = document.createElement("canvas");
 
 startCamera.addEventListener("click", async () => {
