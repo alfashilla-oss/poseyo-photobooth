@@ -143,52 +143,40 @@ async function createPhotoStrip(){
 
     const ctx = stripCanvas.getContext("2d");
 
-    const width = 900;
-    const height = 1600;
+    const frame = await loadImage(selectedFrame);
 
-    stripCanvas.width = width;
-    stripCanvas.height = height;
+    stripCanvas.width = frame.width;
+    stripCanvas.height = frame.height;
 
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0,0,width,height);
+    ctx.clearRect(0,0,stripCanvas.width,stripCanvas.height);
 
-    const photoWidth = 700;
-    const photoHeight = 320;
+    ctx.drawImage(frame,0,0);
 
-    const startX = 100;
-    const startY = 80;
+    const photoWidth = 540;
+    const photoHeight = 300;
 
-    const gap = 35;
+    const startX = 180;
+    const startY = 150;
+
+    const gap = 40;
 
     for(let i=0;i<photos.length;i++){
 
-        const img = new Image();
+        const img = await loadImage(photos[i]);
 
-        await new Promise(resolve=>{
+        ctx.drawImage(
 
-            img.onload = ()=>{
+            img,
 
-                ctx.drawImage(
+            startX,
 
-                    img,
+            startY+i*(photoHeight+gap),
 
-                    startX,
+            photoWidth,
 
-                    startY + i*(photoHeight+gap),
+            photoHeight
 
-                    photoWidth,
-
-                    photoHeight
-
-                );
-
-                resolve();
-
-            };
-
-            img.src = photos[i];
-
-        });
+        );
 
     }
 
