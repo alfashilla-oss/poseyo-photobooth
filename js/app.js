@@ -81,30 +81,42 @@ function delay(ms){
 
 async function takePhoto(){
 
-    countdown.style.display = "block";
+    photos = [];
 
-    for(let i = 3; i >= 1; i--){
+    for(let photo = 1; photo <= 4; photo++){
 
-        countdown.textContent = i;
+        countdown.style.display = "block";
 
-        await delay(1000);
+        for(let i = 3; i >= 1; i--){
+
+            countdown.textContent = i;
+
+            await delay(1000);
+
+        }
+
+        countdown.textContent = "📸";
+
+        await delay(400);
+
+        countdown.style.display = "none";
+
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+
+        const ctx = canvas.getContext("2d");
+
+        ctx.drawImage(video,0,0);
+
+        photos.push(canvas.toDataURL("image/png"));
+
+        await delay(600);
 
     }
 
-    countdown.textContent = "📸";
+    console.log(photos);
 
-    await delay(400);
-
-    countdown.style.display = "none";
-
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-
-    const ctx = canvas.getContext("2d");
-
-    ctx.drawImage(video, 0, 0);
-
-    photoResult.src = canvas.toDataURL("image/png");
+    photoResult.src = photos[0];
 
     photoResult.style.display = "block";
 
