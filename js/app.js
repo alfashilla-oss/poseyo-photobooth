@@ -23,38 +23,45 @@ cards.forEach(card => {
 
 });
 
+
 const video = document.getElementById("video");
+const startCamera = document.getElementById("startCamera");
 
-const startCamera =
-document.getElementById("startCamera");
+let cameraStream = null;
 
-startCamera.addEventListener("click", async ()=>{
+startCamera.addEventListener("click", async () => {
 
-try{
+    if (cameraStream) return;
 
-const stream =
-await navigator.mediaDevices.getUserMedia({
+    try {
 
-video:{
-facingMode:"user"
-},
+        cameraStream = await navigator.mediaDevices.getUserMedia({
 
-audio:false
+            video: {
+                facingMode: "user"
+            },
 
-});
+            audio: false
 
-video.srcObject = stream;
+        });
 
-video.style.display="block";
+        video.srcObject = cameraStream;
 
-}
+        await video.play();
 
-catch(err){
+        video.style.display = "block";
 
-alert("Kamera tidak dapat diakses.");
+        startCamera.disabled = true;
+        startCamera.textContent = "✅ Kamera Aktif";
 
-console.error(err);
+    }
 
-}
+    catch (err) {
+
+        alert("Kamera tidak dapat diakses.");
+
+        console.error(err);
+
+    }
 
 });
