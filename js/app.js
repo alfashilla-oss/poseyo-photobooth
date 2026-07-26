@@ -235,3 +235,23 @@ ctx.drawImage(overlay,0,0);
 
 // Tampilkan hasil
 photoResult.src = stripCanvas.toDataURL("image/png");
+
+downloadPhoto.addEventListener("click", () => {
+
+    if(photos.length === 0){
+
+        alert("Silakan ambil foto terlebih dahulu.");
+
+        return;
+
+    }
+
+    const link = document.createElement("a");
+
+    link.download = "poseyo-photostrip.png";
+
+    link.href = photoResult.src;
+
+    link.click();
+
+});
