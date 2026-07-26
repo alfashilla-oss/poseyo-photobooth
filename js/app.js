@@ -187,13 +187,15 @@ async function createPhotoStrip(){
 
     ctx.drawImage(frame,0,0);
 
-    const photoWidth = 540;
-    const photoHeight = 300;
+    const config = frameConfigs[selectedFrame];
 
-    const startX = 180;
-    const startY = 150;
+const photoWidth = config.width;
+const photoHeight = config.height;
 
-    const gap = 40;
+const startX = config.x;
+const startY = config.y;
+
+const gap = config.gap;
 
     for(let i=0;i<photos.length;i++){
 
