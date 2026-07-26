@@ -29,6 +29,7 @@ const startCamera = document.getElementById("startCamera");
 
 let cameraStream = null;
 let photos = [];
+const stripCanvas = document.createElement("canvas");
 
 startCamera.addEventListener("click", async () => {
 
