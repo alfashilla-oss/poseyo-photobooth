@@ -28,42 +28,69 @@ const video = document.getElementById("video");
 const startCamera = document.getElementById("startCamera");
 
 let cameraStream = null;
+
 let photos = [];
-const frameConfigs = {
 
-    "assets/frames/frame1.png":{
-        x:180,
-        y:150,
-        width:540,
-        height:300,
-        gap:40
-    },
+const frameConfigs={
 
-    "assets/frames/frame2.png":{
-        x:180,
-        y:150,
-        width:540,
-        height:300,
-        gap:40
-    },
+"frame1":{
 
-    "assets/frames/frame3.png":{
-        x:180,
-        y:150,
-        width:540,
-        height:300,
-        gap:40
-    },
+background:"assets/frames/frame1_bg.png",
 
-    "assets/frames/frame4.png":{
-        x:180,
-        y:150,
-        width:540,
-        height:300,
-        gap:40
-    }
+overlay:"assets/frames/frame1_overlay.png",
+
+x:180,
+y:150,
+width:540,
+height:300,
+gap:40
+
+},
+
+"frame2":{
+
+background:"assets/frames/frame2_bg.png",
+
+overlay:"assets/frames/frame2_overlay.png",
+
+x:180,
+y:150,
+width:540,
+height:300,
+gap:40
+
+},
+
+"frame3":{
+
+background:"assets/frames/frame3_bg.png",
+
+overlay:"assets/frames/frame3_overlay.png",
+
+x:180,
+y:150,
+width:540,
+height:300,
+gap:40
+
+},
+
+"frame4":{
+
+background:"assets/frames/frame4_bg.png",
+
+overlay:"assets/frames/frame4_overlay.png",
+
+x:180,
+y:150,
+width:540,
+height:300,
+gap:40
+
+}
 
 };
+
 const stripCanvas = document.createElement("canvas");
 
 startCamera.addEventListener("click", async () => {
