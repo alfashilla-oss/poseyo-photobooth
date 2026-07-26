@@ -244,3 +244,37 @@ nav{
     transform:translateY(-8px) scale(1.02);
 
 }
+
+.camera-box{
+
+width:100%;
+
+aspect-ratio:4/3;
+
+background:#222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin-top:15px;
+
+}
+
+#video{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:none;
+
+}
