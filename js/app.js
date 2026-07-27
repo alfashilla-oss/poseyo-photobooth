@@ -48,64 +48,70 @@ let photos = [];
 
 const frameConfigs = {
 
-    frame1:{
+frame1:{
 
-        frame:"assets/frames/frame1.png",
+frame:"assets/frames/frame1.png",
 
-        x:180,
-        y:150,
+photos:[
 
-        width:540,
-        height:300,
+{x:55,y:38,w:470,h:250},
+{x:55,y:362,w:470,h:250},
+{x:55,y:688,w:470,h:250},
+{x:55,y:1015,w:470,h:250}
 
-        gap:40
+]
 
-    },
+},
 
-    frame2:{
+frame2:{
 
-        frame:"assets/frames/frame2.png",
+frame:"assets/frames/frame2.png",
 
-        x:180,
-        y:150,
+photos:[
 
-        width:540,
-        height:300,
+{x:50,y:45,w:500,h:240},
+{x:620,y:45,w:500,h:240},
+{x:50,y:335,w:500,h:240},
+{x:620,y:335,w:500,h:240},
+{x:50,y:625,w:500,h:240},
+{x:620,y:625,w:500,h:240}
 
-        gap:40
+]
 
-    },
+},
 
-    frame3:{
+frame3:{
 
-        frame:"assets/frames/frame3.png",
+frame:"assets/frames/frame3.png",
 
-        x:180,
-        y:150,
+photos:[
 
-        width:540,
-        height:300,
+{x:70,y:60,w:430,h:430},
+{x:660,y:60,w:430,h:430},
+{x:70,y:570,w:430,h:430},
+{x:660,y:570,w:430,h:430},
+{x:70,y:1080,w:430,h:430},
+{x:660,y:1080,w:430,h:430}
 
-        gap:40
+]
 
-    },
+},
 
-    frame4:{
+frame4:{
 
-        frame:"assets/frames/frame4.png",
+frame:"assets/frames/frame4.png",
 
-        x:180,
-        y:150,
+photos:[
 
-        width:540,
-        height:300,
+{x:60,y:55,w:430,h:300},
+{x:60,y:430,w:430,h:300},
+{x:60,y:805,w:430,h:300}
 
-        gap:40
+]
 
-    }
+}
 
 };
-
 
 // ===========================
 // HELPER
