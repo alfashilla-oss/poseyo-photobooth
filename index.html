@@ -118,18 +118,25 @@ data-preview="assets/previews/preview4.png">
 
 <!-- Preview -->
 
-<section>
+<section class="preview">
 
-<h3>Preview Template</h3>
+    <h3>Preview</h3>
 
-<div class="preview-box">
+    <div id="frameContainer">
 
-<img
-id="previewImage"
-src="assets/previews/preview1.png"
-alt="Preview">
+        <video
+            id="video"
+            autoplay
+            playsinline
+            muted>
+        </video>
 
-</div>
+        <img
+            id="frameOverlay"
+            src="assets/frames/frame1_overlay.png"
+            alt="Frame">
+
+    </div>
 
 </section>
 
