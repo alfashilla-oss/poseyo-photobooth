@@ -276,3 +276,13 @@ nav{
     margin:auto;
 
 }
+
+#video{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+}
