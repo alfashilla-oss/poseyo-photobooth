@@ -180,10 +180,21 @@ section h3{
 }
 
 #video{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
+
     display:none;
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
 }
 
 #countdown{
