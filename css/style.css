@@ -181,18 +181,13 @@ section h3{
 
 #video{
 
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    display:none;
-
     position:absolute;
-
     inset:0;
-
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:18px;
+    display:none;
     z-index:1;
 
 }
@@ -291,18 +286,6 @@ nav{
 
 .preview-box{
     max-width:350px;
-}
-
-}
-
-#video{
-
-    width:100%;
-
-    display:block;
-
-    border-radius:18px;
-
 }
 
 #frameOverlay{
