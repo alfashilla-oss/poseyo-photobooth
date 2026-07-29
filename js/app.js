@@ -93,3 +93,23 @@ const frameConfigs = {
     }
 
 };
+
+// ===============================
+// TEMPLATE
+// ===============================
+
+templateCards.forEach(card=>{
+
+    card.addEventListener("click",()=>{
+
+        templateCards.forEach(c=>c.classList.remove("active"));
+
+        card.classList.add("active");
+
+        selectedFrame = card.dataset.frame;
+
+        frameOverlay.src = frameConfigs[selectedFrame].overlay;
+
+    });
+
+});
