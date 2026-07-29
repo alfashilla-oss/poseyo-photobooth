@@ -113,3 +113,29 @@ templateCards.forEach(card=>{
     });
 
 });
+
+// ===============================
+// HELPER
+// ===============================
+
+function delay(ms){
+
+    return new Promise(resolve=>setTimeout(resolve,ms));
+
+}
+
+function loadImage(src){
+
+    return new Promise((resolve,reject)=>{
+
+        const img = new Image();
+
+        img.onload=()=>resolve(img);
+
+        img.onerror=()=>reject(src);
+
+        img.src=src;
+
+    });
+
+}
