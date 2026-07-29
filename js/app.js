@@ -34,24 +34,29 @@ const frameConfigs = {
 
     frame1:{
 
-        overlay:"assets/frames/frame1_overlay.png",
+    canvasWidth:1181,
 
-        canvasWidth:1181,
-        canvasHeight:1748,
+    canvasHeight:1748,
 
-        photos:[
+    overlay:"assets/frames/frame1_overlay.png",
 
-            // FOTO 1
-            {
-                x:0,
-                y:0,
-                w:0,
-                h:0
-            }
+    photos:[
 
-        ]
+        {x:80,y:305,w:455,h:255},
 
-    },
+        {x:645,y:305,w:455,h:255},
+
+        {x:80,y:660,w:455,h:255},
+
+        {x:645,y:660,w:455,h:255},
+
+        {x:80,y:1065,w:455,h:255},
+
+        {x:645,y:1065,w:455,h:255}
+
+    ]
+
+},
 
     frame2:{
 
